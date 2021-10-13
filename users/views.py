@@ -1,8 +1,13 @@
 from django.shortcuts import render
 
+from users.forms import UserLoginForm
+
+
 def login(request):
+    form = UserLoginForm
     content = {
-        'title': 'Geekshop - Авторизация'
+        'title': 'Geekshop - Авторизация',
+        'form': form
     }
     return render(request, 'users/login.html', content)
 
