@@ -71,6 +71,6 @@ def profile(request):
         'form': UserProfileForm(instance=request.user),
         'baskets': Basket.objects.filter(user=request.user),
         'total_quantiti': total_quantiti,
-        'total_sum': total_sum
+        'total_sum': total_sum,
     }
     return render(request, 'users/profile.html', context)
